@@ -7,10 +7,29 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>nl-NL</language>
     <copyright>CINQ ICT All rights reserved - 2017</copyright>
-    <lastBuildDate>Thu, 07 Sep 2017 21:26:26 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 03 Oct 2017 10:12:37 +0200</lastBuildDate>
     
 	<atom:link href="https://cinqict.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Java One Update 2: De toekomst van Java</title>
+      <link>https://cinqict.github.io/post/bouke/java_one2/</link>
+      <pubDate>Tue, 03 Oct 2017 10:12:37 +0200</pubDate>
+      
+      <guid>https://cinqict.github.io/post/bouke/java_one2/</guid>
+      <description>De chief architect of Java (Mark Reinhold) heeft tijdens de keynote de grootste veranderingen in Java 9 laten zien. Voor mensen die de ontwikkeling van Java een beetje bijhouden, weten dat de grootste wijziging project Jigsaw is. Het is nu mogelijk om je software in modules op te hakken, waarbij een module een groepering van packages is. Dit mechanisme kan je gebruiken naast het al bestaande (inferieure) classpath mechanisme. Tevens zijn alle bestaande java packages opgedeeld in 25 optionele en 1 verplichte module.</description>
+    </item>
+    
+    <item>
+      <title>Java One Update: Preventing Errors Before They Happen</title>
+      <link>https://cinqict.github.io/post/bouke/java_one1/</link>
+      <pubDate>Tue, 03 Oct 2017 10:12:37 +0200</pubDate>
+      
+      <guid>https://cinqict.github.io/post/bouke/java_one1/</guid>
+      <description>Dit is de eerste blog van een serie updates live vanaf de JavaOne in San Francisco.
+Vanochtend hebben we een sessie bijgewoond met de interessante titel: Preventing Errors Before They Happen. De presentatie ging voornamelijk over een uitbreiding op de static type checking die standaard al in Java zit. Een voorbeeld hiervan is dat je geen String kan toewijzigen aan een integer variable. Je krijgt dan namelijk een foutmelding van de compiler.</description>
+    </item>
     
     <item>
       <title>Commandline Awesome: Dry</title>
