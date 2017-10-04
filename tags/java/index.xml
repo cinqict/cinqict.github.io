@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>nl-NL</language>
     <copyright>CINQ ICT All rights reserved - 2017</copyright>
-    <lastBuildDate>Tue, 03 Oct 2017 10:12:37 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 04 Oct 2017 10:12:37 +0200</lastBuildDate>
     
 	<atom:link href="https://cinqict.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Java One Update 3: Java 8 Program Idioms</title>
+      <link>https://cinqict.github.io/post/bouke/java_one3/</link>
+      <pubDate>Wed, 04 Oct 2017 10:12:37 +0200</pubDate>
+      
+      <guid>https://cinqict.github.io/post/bouke/java_one3/</guid>
+      <description>De meest interessante sessie van vandaag was Java 8 Program Idioms door Venkat Subramaniam. In razend tempo en met veel humor sneed hij een aantal interessante onderwerpen aan waarvan ik er hier een drietal zal behandelen.
+Het eerste is dat declaratief programmeren vaak superieur is aan functioneel programmeren. Dat laat zich het beste uitleggen aan de hand van een voorbeeld. Hieronder staan twee stukken code die precies hetzelfde doen.
+people.stream() .</description>
+    </item>
     
     <item>
       <title>Java One Update 2: De toekomst van Java</title>

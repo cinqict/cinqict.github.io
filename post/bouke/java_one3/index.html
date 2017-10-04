@@ -14,15 +14,15 @@
 
 
 
-<meta name="twitter:title" content="Java One Update 2: De toekomst van Java"/>
+<meta name="twitter:title" content="Java One Update 3: Java 8 Program Idioms"/>
 <meta name="twitter:description" content=""/>
 <meta name="twitter:site" content="@cinqict"/>
 
 
 
-  	<meta property="og:title" content="Java One Update 2: De toekomst van Java &middot; CINQ ICT Tech Blog" />
+  	<meta property="og:title" content="Java One Update 3: Java 8 Program Idioms &middot; CINQ ICT Tech Blog" />
   	<meta property="og:site_name" content="CINQ ICT Tech Blog" />
-  	<meta property="og:url" content="https://cinqict.github.io/post/bouke/java_one2/" />
+  	<meta property="og:url" content="https://cinqict.github.io/post/bouke/java_one3/" />
 
     
        <meta property="og:image" content="/images/javaone.jpg"/>
@@ -31,7 +31,7 @@
     
     <meta property="og:description" content="" />
   	<meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2017-10-03T10:12:37&#43;02:00" />
+    <meta property="article:published_time" content="2017-10-04T10:12:37&#43;02:00" />
 
     
     <meta property="article:tag" content="java" />
@@ -40,12 +40,16 @@
     
     <meta property="article:tag" content="cool" />
     
+    <meta property="article:tag" content="idioms" />
+    
+    <meta property="article:tag" content="java 8" />
+    
     
 
-    <title>Java One Update 2: De toekomst van Java &middot; CINQ ICT Tech Blog</title>
+    <title>Java One Update 3: Java 8 Program Idioms &middot; CINQ ICT Tech Blog</title>
 
     
-    <meta name="description" content="De chief architect of Java (Mark Reinhold) heeft tijdens de keynote de grootste veranderingen in Java 9 laten zien. Voor mensen die de ontwikkeling van Java een" />
+    <meta name="description" content="De meest interessante sessie van vandaag was Java 8 Program Idioms door Venkat Subramaniam. In razend tempo en met veel humor sneed hij een aantal interessante " />
     
 
     <meta name="HandheldFriendly" content="True" />
@@ -74,7 +78,7 @@
     
     <meta name="generator" content="Hugo 0.26" />
 
-    <link rel="canonical" href="https://cinqict.github.io/post/bouke/java_one2/" />
+    <link rel="canonical" href="https://cinqict.github.io/post/bouke/java_one3/" />
 
     
       
@@ -113,17 +117,17 @@
         "description": my bio
         
     },
-    "headline": Java One Update 2: De toekomst van Java,
-    "name": Java One Update 2: De toekomst van Java,
-    "wordCount": 369,
+    "headline": Java One Update 3: Java 8 Program Idioms,
+    "name": Java One Update 3: Java 8 Program Idioms,
+    "wordCount": 339,
     "timeRequired": "PT2M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": en
     },
-    "url": https://cinqict.github.io/post/bouke/java_one2/,
-    "datePublished": 2017-10-03T10:12Z,
-    "dateModified": 2017-10-03T10:12Z,
+    "url": https://cinqict.github.io/post/bouke/java_one3/,
+    "datePublished": 2017-10-04T10:12Z,
+    "dateModified": 2017-10-04T10:12Z,
     
     "image": {
         "@type": "ImageObject",
@@ -132,11 +136,11 @@
         "height": 1445
     },
     
-    "keywords": java, java one, cool,
+    "keywords": java, java one, cool, idioms, java 8,
     "description": ,
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": https://cinqict.github.io/post/bouke/java_one2/
+        "@id": https://cinqict.github.io/post/bouke/java_one3/
     }
 }
     </script>
@@ -208,13 +212,13 @@
   <article class="post post">
 
     <header class="post-header">
-        <h1 class="post-title">Java One Update 2: De toekomst van Java</h1>
+        <h1 class="post-title">Java One Update 3: Java 8 Program Idioms</h1>
         <small></small>
 
         <section class="post-meta">
         
-          <time class="post-date" datetime="2017-10-03T10:12:37&#43;02:00">
-            Oct 3, 2017
+          <time class="post-date" datetime="2017-10-04T10:12:37&#43;02:00">
+            Oct 4, 2017
           </time>
         
          
@@ -224,26 +228,54 @@
          
           <span class="post-tag small"><a href="https://cinqict.github.io/tags/cool/">#cool</a></span>
          
+          <span class="post-tag small"><a href="https://cinqict.github.io/tags/idioms/">#idioms</a></span>
+         
+          <span class="post-tag small"><a href="https://cinqict.github.io/tags/java-8/">#java 8</a></span>
+         
         </section>
     </header>
 
     <section class="post-content">
-      <p>De chief architect of Java (Mark Reinhold) heeft tijdens de keynote de grootste veranderingen in Java 9 laten zien. Voor mensen die de ontwikkeling van Java een beetje bijhouden, weten dat de grootste wijziging project Jigsaw is. Het is nu mogelijk om je software in modules op te hakken, waarbij een module een groepering van packages is. Dit mechanisme kan je gebruiken naast het al bestaande (inferieure) classpath mechanisme. Tevens zijn alle bestaande java packages opgedeeld in 25 optionele en 1 verplichte module. Dat betekent dat je nu veel kleinere deployment units kan hebben, want alle ongebruikte, optionele modules heb je niet meer nodig. Precies wat je wilt in deze tijden van microservices en serverless computing.</p>
+      <p>De meest interessante sessie van vandaag was Java 8 Program Idioms door Venkat Subramaniam. In razend tempo en met veel humor sneed hij een aantal interessante onderwerpen aan waarvan ik er hier een drietal zal behandelen.</p>
 
-<p>Daarnaast komt er nu elke zes maanden een nieuwe versie van Java. De vorige versie van Java (8) is namelijk alweer drie jaar geleden gereleased. Dit releaseschema kun je je als zelfrespecterende taal eigenlijk niet meer veroorloven. Oftewel in maart kunnen we Java 10 verwachten. Eén van de zaken die er zo goed als zeker in zit is Local Variable Type Inference. Je kent het principe waarschijnlijk al uit andere (script)talen. Dit kunnen we het beste uitleggen aan de hand van een voorbeeld.</p>
+<p>Het eerste is dat declaratief programmeren vaak superieur is aan functioneel programmeren. Dat laat zich het beste uitleggen aan de hand van een voorbeeld. Hieronder staan twee stukken code die precies hetzelfde doen.</p>
 
-<pre><code class="language-java">var list = new ArrayList&lt;String&gt;();
-var stream = list.stream();
+<pre><code class="language-java">people.stream()
+        .filter(person -&gt; person.getAge() &gt; 25)
+        .map(Person::getName)
+        .map(String::toUpperCase)
+        .forEach(System.out::println);
+
+for (Person person : people) {
+    if (person.getAge() &gt; 25) {
+        String name = person.getName();
+        String toUpperCase = name.toUpperCase();
+        System.out.println(toUpperCase);
+    }
+}
 </code></pre>
 
-<p>Wat je hier ziet is dat de compiler in staat is om zelf het type van de variable af te leiden. Dit kun je namelijk makelijk uit de gegevens aan de rechterkant van het statement halen. De eerste variable zal als type ArrayList<String> hebben en de tweede Stream<String>. De tweede is iets lastiger, maar dit is simpelweg het returntype van de stream methode.</p>
+<p>De eerste is declaratief en de tweede is functioneel. Bij declaratief vertel je de compiler wat je wil en bij functioneel vertel je hoe het moet. De eerste variant is beknopter en makkelijker te lezen. Verder is het meestal makkelijker om aan te geven wat je wil dan te vertellen hoe iets moet. Tot slot is declaratieve variant sneller uit te voeren door de CPU. Oftewel declaratief programmeren is beter dan functioneel programmeren.</p>
 
-<p>Daarnaast zit Generic Specialization eraan te komen. Dit houdt in de we straks ook Collections van primitieven kunnen hebben. Het is nu alleen mogelijk om de Collections API op objecten te gebruiken en dus niet op simpele waarden zoals int, boolean en char. In code ziet dit er dan alvolgt uit:</p>
+<p>De tweede interessante stelling gaat over het gebruik van lambdas. Als je code leesbaar wilt houden dan gebruik je alleen de simpelste varianten. Alleen de volgende twee constructies zijn dan toegestaan:</p>
 
-<pre><code class="language-java">List&lt;char&gt; charList = new ArrayList&lt;char&gt;();
+<ul>
+<li>een method reference welke te herkennen is aan de &lsquo;::&rsquo; zoals in Person::getName</li>
+<li>een lambda zonder accolades, return statement en een puntkomma zoals person -&gt; person.getAge()</li>
+</ul>
+
+<p>Alle andere varianten zijn te ingewikkeld en maken daardoor de code minder goed leesbaar.</p>
+
+<p>Tot slot zijn kortere lambda&rsquo;s de beste lambda&rsquo;s. Dit laat zich wederom het beste uitleggen met voorbeelden. De volgende drie regels code doen exact hetzelfde.</p>
+
+<pre><code class="language-java">(Person person) -&gt; { return person.getName(); }
+(Person person) -&gt; person.getName();
+Person::getName
 </code></pre>
 
-<p>Tot slot was het ook interessant om te horen dat alle verschillen tussen OpenJDK en de Oracle JDK gaan verdwijnen. Oftewel alle extra tools (zoals Mission Control en daarin de Flight Recorder) zijn straks zonder lastige Oracle restricties te gebruiken door iedereen.</p>
+<p>Elke regel is een beetje korter dan zijn voorganger. De laatste regel is het makkelijkst te interpreteren en daardoor het snelst te begrijpen. Oftewel korter is beter. Van de vorige stelling hadden we al geleerd dat de eerste variant sowieso uit den boze is.</p>
+
+<p>Voor meer informatie over dit onderwerp is onderstaande *<a href="http://blog.agiledeveloper.com/2015/06/lambdas-are-glue-code.html">blogpost</a> van Venkat Subramaniam een aanrader.</p>
 
     </section>
 
@@ -282,19 +314,19 @@ var stream = list.stream();
     
 <section class="share">
   <h4>Share this post</h4>
-  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Java%20One%20Update%202%3a%20De%20toekomst%20van%20Java&nbsp;-&nbsp;CINQ%20ICT%20Tech%20Blog&amp;url=https%3a%2f%2fcinqict.github.io%2fpost%2fbouke%2fjava_one2%2f"
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Java%20One%20Update%203%3a%20Java%208%20Program%20Idioms&nbsp;-&nbsp;CINQ%20ICT%20Tech%20Blog&amp;url=https%3a%2f%2fcinqict.github.io%2fpost%2fbouke%2fjava_one3%2f"
       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
       <span class="hidden">Twitter</span>
   </a>
-  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fcinqict.github.io%2fpost%2fbouke%2fjava_one2%2f"
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fcinqict.github.io%2fpost%2fbouke%2fjava_one3%2f"
       onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
       <span class="hidden">Facebook</span>
   </a>
-  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fcinqict.github.io%2fpost%2fbouke%2fjava_one2%2f&amp;description=Java%20One%20Update%202%3a%20De%20toekomst%20van%20Java"
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fcinqict.github.io%2fpost%2fbouke%2fjava_one3%2f&amp;description=Java%20One%20Update%203%3a%20Java%208%20Program%20Idioms"
       onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
       <span class="hidden">Pinterest</span>
   </a>
-  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2fcinqict.github.io%2fpost%2fbouke%2fjava_one2%2f"
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2fcinqict.github.io%2fpost%2fbouke%2fjava_one3%2f"
      onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
       <span class="hidden">Google+</span>
   </a>
@@ -311,8 +343,8 @@ var stream = list.stream();
 
 
 var disqus_config = function () {
-this.page.url = "https:\/\/cinqict.github.io\/post\/bouke\/java_one2\/";  
-this.page.identifier = "https:\/\/cinqict.github.io\/post\/bouke\/java_one2\/"; 
+this.page.url = "https:\/\/cinqict.github.io\/post\/bouke\/java_one3\/";  
+this.page.identifier = "https:\/\/cinqict.github.io\/post\/bouke\/java_one3\/"; 
 };
 
 (function() { 
@@ -339,17 +371,10 @@ s.setAttribute('data-timestamp', +new Date());
 
   <aside class="read-next">
   
-      <a class="read-next-story" style="background-image: url(/images/javaone.jpg)" href="https://cinqict.github.io/post/bouke/java_one3/">
-          <section class="post">
-              <h2>Java One Update 3: Java 8 Program Idioms</h2>
-              
-          </section>
-      </a>
   
-  
-      <a class="read-next-story prev" style="background-image: url(/images/javaone.jpg)" href="https://cinqict.github.io/post/bouke/java_one1/">
+      <a class="read-next-story prev" style="background-image: url(/images/javaone.jpg)" href="https://cinqict.github.io/post/bouke/java_one2/">
           <section class="post">
-              <h2>Java One Update: Preventing Errors Before They Happen</h2>
+              <h2>Java One Update 2: De toekomst van Java</h2>
           </section>
       </a>
   

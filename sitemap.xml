@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://cinqict.github.io/post/bouke/java_one3/</loc>
+    <lastmod>2017-10-04T10:12:37+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://cinqict.github.io/post/bouke/java_one2/</loc>
     <lastmod>2017-10-03T10:12:37+02:00</lastmod>
   </url>
@@ -24,7 +29,7 @@
   
   <url>
     <loc>https://cinqict.github.io/</loc>
-    <lastmod>2017-10-03T10:12:37+02:00</lastmod>
+    <lastmod>2017-10-04T10:12:37+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -41,7 +46,7 @@
   
   <url>
     <loc>https://cinqict.github.io/tags/cool/</loc>
-    <lastmod>2017-10-03T10:12:37+02:00</lastmod>
+    <lastmod>2017-10-04T10:12:37+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -58,20 +63,32 @@
   </url>
   
   <url>
+    <loc>https://cinqict.github.io/tags/idioms/</loc>
+    <lastmod>2017-10-04T10:12:37+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://cinqict.github.io/tags/java/</loc>
-    <lastmod>2017-10-03T10:12:37+02:00</lastmod>
+    <lastmod>2017-10-04T10:12:37+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cinqict.github.io/tags/java-8/</loc>
+    <lastmod>2017-10-04T10:12:37+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://cinqict.github.io/tags/java-one/</loc>
-    <lastmod>2017-10-03T10:12:37+02:00</lastmod>
+    <lastmod>2017-10-04T10:12:37+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://cinqict.github.io/post/</loc>
-    <lastmod>2017-10-03T10:12:37+02:00</lastmod>
+    <lastmod>2017-10-04T10:12:37+02:00</lastmod>
     <priority>0</priority>
   </url>
   
