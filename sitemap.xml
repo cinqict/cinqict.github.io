@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://cinqict.github.io/post/wian/dockercon_1/</loc>
+    <lastmod>2017-10-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://cinqict.github.io/post/bouke/java_one3/</loc>
     <lastmod>2017-10-04T10:12:37+02:00</lastmod>
   </url>
@@ -29,7 +34,7 @@
   
   <url>
     <loc>https://cinqict.github.io/</loc>
-    <lastmod>2017-10-04T10:12:37+02:00</lastmod>
+    <lastmod>2017-10-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -52,7 +57,13 @@
   
   <url>
     <loc>https://cinqict.github.io/tags/docker/</loc>
-    <lastmod>2017-09-07T21:26:26+02:00</lastmod>
+    <lastmod>2017-10-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cinqict.github.io/tags/dockercon/</loc>
+    <lastmod>2017-10-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -87,14 +98,26 @@
   </url>
   
   <url>
+    <loc>https://cinqict.github.io/tags/kubernetes/</loc>
+    <lastmod>2017-10-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://cinqict.github.io/post/</loc>
-    <lastmod>2017-10-04T10:12:37+02:00</lastmod>
+    <lastmod>2017-10-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://cinqict.github.io/tags/shell/</loc>
     <lastmod>2017-09-07T21:26:26+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cinqict.github.io/tags/swarm/</loc>
+    <lastmod>2017-10-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

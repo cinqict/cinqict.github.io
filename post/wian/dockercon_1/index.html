@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="nl-NL">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    
+        
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:image" content="/images/dockercon1.png"/>
+    
+
+
+
+<meta name="twitter:title" content="Dockercon EU 17 update: Docker goes Kubernetes"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@cinqict"/>
+
+
+
+  	<meta property="og:title" content="Dockercon EU 17 update: Docker goes Kubernetes &middot; CINQ ICT Tech Blog" />
+  	<meta property="og:site_name" content="CINQ ICT Tech Blog" />
+  	<meta property="og:url" content="https://cinqict.github.io/post/wian/dockercon_1/" />
+
+    
+       <meta property="og:image" content="/images/dockercon1.png"/>
+    
+
+    
+    <meta property="og:description" content="" />
+  	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2017-10-18T00:00:00Z" />
+
+    
+    <meta property="article:tag" content="Docker" />
+    
+    <meta property="article:tag" content="Dockercon" />
+    
+    <meta property="article:tag" content="Kubernetes" />
+    
+    <meta property="article:tag" content="swarm" />
+    
+    
+
+    <title>Dockercon EU 17 update: Docker goes Kubernetes &middot; CINQ ICT Tech Blog</title>
+
+    
+    <meta name="description" content="De grootste aankonding tijdens de Dockercon EU 2017 general session was de integratie van Kubernetes in de Docker EE en CE toolstacks. Waarom is dit een grootte" />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="https://cinqict.github.io/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="https://cinqict.github.io/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="https://cinqict.github.io/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="https://cinqict.github.io/css/nav.css" />
+
+    
+
+    
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+        
+        <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+      
+          <link href="https://cinqict.github.io/index.xml" rel="alternate" type="application/rss+xml" title="CINQ ICT Tech Blog" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.26" />
+
+    <link rel="canonical" href="https://cinqict.github.io/post/wian/dockercon_1/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": ,
+        "logo": https://cinqict.github.ioimages/cinq_logo.png
+    },
+    "author": {
+        "@type": "Person",
+        "name": ,
+        
+        "image": {
+            "@type": "ImageObject",
+            "url": https://cinqict.github.ioimages/cinq_logo.png,
+            "width": 250,
+            "height": 250
+        }, 
+        
+        "url": http://cinqict.nl,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ],
+        "description": my bio
+        
+    },
+    "headline": Dockercon EU 17 update: Docker goes Kubernetes,
+    "name": Dockercon EU 17 update: Docker goes Kubernetes,
+    "wordCount": 288,
+    "timeRequired": "PT2M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": en
+    },
+    "url": https://cinqict.github.io/post/wian/dockercon_1/,
+    "datePublished": 2017-10-18T00:00Z,
+    "dateModified": 2017-10-18T00:00Z,
+    
+    "image": {
+        "@type": "ImageObject",
+        "url": https://cinqict.github.ioimages/dockercon1.png,
+        "width": 3000,
+        "height": 1445
+    },
+    
+    "keywords": Docker, Dockercon, Kubernetes, swarm,
+    "description": ,
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": https://cinqict.github.io/post/wian/dockercon_1/
+    }
+}
+    </script>
+    
+
+
+    
+
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-106769321-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+    </ul>
+
+    
+    <a class="subscribe-button icon-feed" href="https://cinqict.github.io/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+  
+  <header class="main-header post-head" style="background-image: url(/images/dockercon1.png)">
+  
+  <nav class="main-nav overlay clearfix">
+
+
+  
+      <a class="blog-logo" href="https://cinqict.github.io"><img src="https://cinqict.github.io/images/cinq_logo.png" alt="Home" /></a>
+  
+  
+      <a class="menu-button icon-feed" href="https://cinqict.github.io/index.xml" >&nbsp;&nbsp;Subscribe</a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">Dockercon EU 17 update: Docker goes Kubernetes</h1>
+        <small></small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2017-10-18T00:00:00Z">
+            Oct 18, 2017
+          </time>
+        
+         
+          <span class="post-tag small"><a href="https://cinqict.github.io/tags/docker/">#Docker</a></span>
+         
+          <span class="post-tag small"><a href="https://cinqict.github.io/tags/dockercon/">#Dockercon</a></span>
+         
+          <span class="post-tag small"><a href="https://cinqict.github.io/tags/kubernetes/">#Kubernetes</a></span>
+         
+          <span class="post-tag small"><a href="https://cinqict.github.io/tags/swarm/">#swarm</a></span>
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      <p>De grootste aankonding tijdens de Dockercon EU 2017 general session was de integratie van Kubernetes in de Docker EE en CE toolstacks.
+Waarom is dit een grootte aankonding? Omdat het feitelijk betekend dat Docker afstapt van de hechte integratie met zijn eigen product Swarm en gaat bijdragen aan het Kubernetes project. Wat vooral verrassend is, is dat deze integratie al in Q1 van 2018 beschikbaar is in de productie versie van Docker EE.</p>
+
+<p>Dit nieuws kwam echt als een complete verrassing aangezien in het verleden Docker swarm lijnrecht tegenover Kubernetes stond beide gepositioneerd als <em>het</em> orchestratie platform voor container workloads.</p>
+
+<p>Het nieuws dat Docker Kubernetes gaat ondersteunen als orchestration framework is alweer een aankondiging van een grote speler in het container werkveld dat het voor orchestratie overstapt naar de Google orchestatie oplossing. Eerder deze maanden deden ook <a href="http://rancher.com">Rancher</a> en <a href="https://pivotal.io">Pivotal</a> (beide beschikkend over eigen orchestration frameworks) aankondigingen van dezelfde strekking.</p>
+
+<p>Voor Docker betekend het waarschijnlijk het winnen van de strijd met <a href="https://coreos.com"><em>rkt</em></a> aangezien Kubernetes lang gezien werd als de mogelijke gateway voor bedrijven om over te stappen van Docker naar <em>rkt</em>. Ze geven dus duidelijk onderscheidend vermogen in de orchestration space op om zo hun concurrentie positie aanzienlijk te versterken.</p>
+
+<p>Het is nog wel even afwachten hoe de integratie zich zal manifesteren. Tot nu toe wordt vrij duidelijk gecommuniceerd dat de Kubernetes ondersteuning aanwezig zal zijn in Docker EE en Docker CE for Mac en Windows alsmede het Moby project. Wat nog niet duidelijk is is of de integratie ook in Docker CE for Linux aanwezig zal zijn. Het zou dus nog zomaar kunnen zijn dat je voor de Kubernetes integratie aangewezen bent op docker EE.</p>
+
+<p>Inschrijven voor de open beta van kubernetes support in Docker kan <a href="http://www.docker.com/kubernetes">hier</a>.</p>
+
+<p><img src="https://cinqict.github.io/images/dockercon_kube1.jpg" alt="" /></p>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+
+
+
+
+
+
+
+
+<figure class="author-image">
+    <a class="img" href="https://cinqict.github.io" style="background-image: url(https://octodex.github.com/images/dojocat.jpg)"><span class="hidden">Wian Vos's Picture</span></a>
+</figure>
+
+
+<section class="author">
+  <h4><a href="https://cinqict.github.io">Wian Vos</a></h4>
+  
+  <p>Devops Cloud Engineer, Open source enthusiast.</p>
+  
+  <div class="author-meta">
+    <span class="author-location icon-location">Amsterdam, Netherlands</span>
+    <span class="author-link icon-link"><a href="www.github.com/wianvos">www.github.com/wianvos</a></span>
+  </div>
+</section>
+
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Dockercon%20EU%2017%20update%3a%20Docker%20goes%20Kubernetes&nbsp;-&nbsp;CINQ%20ICT%20Tech%20Blog&amp;url=https%3a%2f%2fcinqict.github.io%2fpost%2fwian%2fdockercon_1%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fcinqict.github.io%2fpost%2fwian%2fdockercon_1%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fcinqict.github.io%2fpost%2fwian%2fdockercon_1%2f&amp;description=Dockercon%20EU%2017%20update%3a%20Docker%20goes%20Kubernetes"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2fcinqict.github.io%2fpost%2fwian%2fdockercon_1%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+<div id="disqus_thread"></div>
+<script>
+
+
+
+
+var disqus_config = function () {
+this.page.url = "https:\/\/cinqict.github.io\/post\/wian\/dockercon_1\/";  
+this.page.identifier = "https:\/\/cinqict.github.io\/post\/wian\/dockercon_1\/"; 
+};
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://cinqicttest.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+
+
+  </footer>
+</article>
+
+</main>
+
+
+  <aside class="read-next">
+  
+  
+      <a class="read-next-story prev" style="background-image: url(/images/javaone.jpg)" href="https://cinqict.github.io/post/bouke/java_one3/">
+          <section class="post">
+              <h2>Java One Update 3: Java 8 Program Idioms</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">CINQ ICT Tech Blog</a> CINQ ICT All rights reserved - 2017</section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="https://cinqict.github.io/js/jquery.js"></script>
+    <script type="text/javascript" src="https://cinqict.github.io/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://cinqict.github.io/js/index.js"></script>
+    
+</body>
+</html>
+

@@ -33,9 +33,18 @@
     <item>
       <title>Docker</title>
       <link>https://cinqict.github.io/tags/docker/</link>
-      <pubDate>Thu, 07 Sep 2017 21:26:26 +0200</pubDate>
+      <pubDate>Wed, 18 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>https://cinqict.github.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dockercon</title>
+      <link>https://cinqict.github.io/tags/dockercon/</link>
+      <pubDate>Wed, 18 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cinqict.github.io/tags/dockercon/</guid>
       <description></description>
     </item>
     
@@ -85,11 +94,29 @@
     </item>
     
     <item>
+      <title>Kubernetes</title>
+      <link>https://cinqict.github.io/tags/kubernetes/</link>
+      <pubDate>Wed, 18 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cinqict.github.io/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Shell</title>
       <link>https://cinqict.github.io/tags/shell/</link>
       <pubDate>Thu, 07 Sep 2017 21:26:26 +0200</pubDate>
       
       <guid>https://cinqict.github.io/tags/shell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Swarm</title>
+      <link>https://cinqict.github.io/tags/swarm/</link>
+      <pubDate>Wed, 18 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cinqict.github.io/tags/swarm/</guid>
       <description></description>
     </item>
     
