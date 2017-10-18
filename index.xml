@@ -18,7 +18,7 @@
       <pubDate>Wed, 18 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>https://cinqict.github.io/post/wian/dockercon_1/</guid>
-      <description>De grootste aankonding tijdens de Dockercon EU 2017 general session was de integratie van Kubernetes in de Docker EE en CE toolstacks. Waarom is dit een grootte aankonding? Omdat het feitelijk betekend dat Docker afstapt van de hechte integratie met zijn eigen product Swarm en gaat bijdragen aan het Kubernetes project. Wat vooral verrassend is, is dat deze integratie al in Q1 van 2018 beschikbaar is in de productie versie van Docker EE.</description>
+      <description>De grootste aankonding tijdens de Dockercon EU 2017 general session was de integratie van Kubernetes in de Docker EE en CE toolstacks. Waarom is dit een grote aankonding? Omdat het feitelijk betekend dat Docker afstapt van de hechte integratie met zijn eigen product Swarm en gaat bijdragen aan het Kubernetes project. Wat vooral verrassend is, is dat deze integratie al in Q1 van 2018 beschikbaar is in de productie versie van Docker EE.</description>
     </item>
     
     <item>
