@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://cinqict.github.io/post/bas/splunklive1/</loc>
+    <lastmod>2017-12-04T13:12:37+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://cinqict.github.io/post/wian/dockercon_1/</loc>
     <lastmod>2017-10-18T00:00:00+00:00</lastmod>
   </url>
@@ -34,7 +39,7 @@
   
   <url>
     <loc>https://cinqict.github.io/</loc>
-    <lastmod>2017-10-18T00:00:00+00:00</lastmod>
+    <lastmod>2017-12-04T13:12:37+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -105,13 +110,25 @@
   
   <url>
     <loc>https://cinqict.github.io/post/</loc>
-    <lastmod>2017-10-18T00:00:00+00:00</lastmod>
+    <lastmod>2017-12-04T13:12:37+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://cinqict.github.io/tags/shell/</loc>
     <lastmod>2017-09-07T21:26:26+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cinqict.github.io/tags/splunk/</loc>
+    <lastmod>2017-12-04T13:12:37+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cinqict.github.io/tags/splunklive/</loc>
+    <lastmod>2017-12-04T13:12:37+02:00</lastmod>
     <priority>0</priority>
   </url>
   
