@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>nl-NL</language>
     <copyright>CINQ ICT All rights reserved - 2017</copyright>
-    <lastBuildDate>Wed, 18 Oct 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 12 Dec 2017 14:26:26 +0200</lastBuildDate>
     
 	<atom:link href="https://cinqict.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Dockerfile on a Diet</title>
+      <link>https://cinqict.github.io/post/christiaan/docker_file_best_practices/</link>
+      <pubDate>Tue, 12 Dec 2017 14:26:26 +0200</pubDate>
+      
+      <guid>https://cinqict.github.io/post/christiaan/docker_file_best_practices/</guid>
+      <description>Op de eerste dag van DockerCon EU, een paar maanden geleden, was ik aanwezig bij een sessie van Abby Fuller (senior technical evangelist, AWS) over hoe efficiënte Docker files geschreven kunnen worden. Dat klinkt misschien niet heel erg spannend, maar was zowel voor de beginnende als de iets meer gevorderde Docker user handig om te volgen. Er wordt namelijk vaak vergeten dat de opzet van een Dockerfile een groot verschil kan maken op de omvang van een Docker image.</description>
+    </item>
     
     <item>
       <title>Dockercon EU 17 update: Docker goes Kubernetes</title>
