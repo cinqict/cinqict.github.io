@@ -243,7 +243,7 @@ Er wordt namelijk vaak vergeten dat de opzet van een Dockerfile een groot versch
 <li>Chain je RUN statements. Gebruik bijvoorbeeld 1 RUN statement om meerdere packages te installeren.</li>
 <li>Zorg dat je Docker image zoveel mogelijk gebruik maakt van caching. Bewaar je run statements voor het einde en zorg dat de wijzigingen die je moet maken aan je image zo ver mogelijk in jouw image worden uitgesteld. Hier zijn uiteraard uitzonderingen op.</li>
 <li>Wisselen van gebruikers voegt layers toe. Mocht je een bepaalde user moeten gebruiken voor een package/app. Probeer dan het wisselen van user te voorkomen.</li>
-<li>Vermijdt het toevoegen van grote files. Install packages kunnen worden uitgepakt, geinstalleerd    en worden verwijdert in 1 RUN statement.</li>
+<li>Vermijdt het toevoegen van grote files. Install packages kunnen worden uitgepakt, geinstalleerd en worden verwijderd in 1 RUN statement.</li>
 <li>Gebruik een base image die past bij je container. Een minimale base image zoals Alpine kan veel disk space besparen maar is niet altijd de beste keuze in verband met security, packages en functionaliteit.</li>
 </ul>
 
