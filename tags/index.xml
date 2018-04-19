@@ -31,9 +31,18 @@
     </item>
     
     <item>
+      <title>Development</title>
+      <link>https://cinqict.github.io/tags/development/</link>
+      <pubDate>Thu, 19 Apr 2018 13:12:37 +0200</pubDate>
+      
+      <guid>https://cinqict.github.io/tags/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Docker</title>
       <link>https://cinqict.github.io/tags/docker/</link>
-      <pubDate>Tue, 12 Dec 2017 14:26:26 +0200</pubDate>
+      <pubDate>Thu, 19 Apr 2018 13:12:37 +0200</pubDate>
       
       <guid>https://cinqict.github.io/tags/docker/</guid>
       <description></description>
@@ -99,6 +108,15 @@
       <pubDate>Wed, 04 Oct 2017 10:12:37 +0200</pubDate>
       
       <guid>https://cinqict.github.io/tags/java-one/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jenkins</title>
+      <link>https://cinqict.github.io/tags/jenkins/</link>
+      <pubDate>Thu, 19 Apr 2018 13:12:37 +0200</pubDate>
+      
+      <guid>https://cinqict.github.io/tags/jenkins/</guid>
       <description></description>
     </item>
     

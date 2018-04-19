@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jenkins on CINQ ICT Tech Blog</title>
+    <link>https://cinqict.github.io/tags/jenkins/</link>
+    <description>Recent content in Jenkins on CINQ ICT Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>nl-NL</language>
+    <copyright>CINQ ICT All rights reserved - 2017</copyright>
+    <lastBuildDate>Thu, 19 Apr 2018 13:12:37 +0200</lastBuildDate>
+    
+	<atom:link href="https://cinqict.github.io/tags/jenkins/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Building a Jenkins development Docker image</title>
+      <link>https://cinqict.github.io/post/eric/jenkinsdocker/</link>
+      <pubDate>Thu, 19 Apr 2018 13:12:37 +0200</pubDate>
+      
+      <guid>https://cinqict.github.io/post/eric/jenkinsdocker/</guid>
+      <description>While developing my Jenkinsfile and init Groovy scripts, I needed a Jenkins Docker image that I could launch and destroy easily with a minimal amount of manual interaction. To my surprise, I needed to google multiple references to set this up. Enough reason for me to share my findings and results.
+Jenkins offers a official Docker image jenkins/jenkins. This is a good starting point to create your own image since it contains an extensive readme with al kinds of code snippets that you can use in your Dockerfile.</description>
+    </item>
+    
+  </channel>
+</rss>
