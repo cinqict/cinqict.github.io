@@ -9,7 +9,7 @@
     
         
         <meta name="twitter:card" content="summary_large_image"/>
-        <meta name="twitter:image" content="/images/dockerjenkins.png"/>
+        <meta name="twitter:image" content="/images/jenkins-docker-1.png"/>
     
 
 
@@ -25,7 +25,7 @@
   	<meta property="og:url" content="https://cinqict.github.io/post/eric/jenkinsdocker/" />
 
     
-       <meta property="og:image" content="/images/dockerjenkins.png"/>
+       <meta property="og:image" content="/images/jenkins-docker-1.png"/>
     
 
     
@@ -127,7 +127,7 @@
     
     "image": {
         "@type": "ImageObject",
-        "url": https://cinqict.github.ioimages/dockerjenkins.png,
+        "url": https://cinqict.github.ioimages/jenkins-docker-1.png,
         "width": 3000,
         "height": 1445
     },
@@ -184,7 +184,7 @@
 
 
   
-  <header class="main-header post-head" style="background-image: url(/images/dockerjenkins.png)">
+  <header class="main-header post-head" style="background-image: url(/images/jenkins-docker-1.png)">
   
   <nav class="main-nav overlay clearfix">
 
@@ -235,9 +235,9 @@ I needed a Jenkins Docker image that I could launch and destroy easily with a mi
 To my surprise, I needed to google multiple references to set this up.
 Enough reason for me to share my findings and results.</p>
 
-<p>Jenkins offers a official Docker image <a href="https://hub.docker.com/r/jenkins/jenkins/">jenkins/jenkins</a>.
+<p>Jenkins offers an official Docker image <a href="https://hub.docker.com/r/jenkins/jenkins/">jenkins/jenkins</a>.
 This is a good starting point to create your own image since it contains an extensive readme
-with al kinds of code snippets that you can use in your Dockerfile.</p>
+with all kinds of code snippets that you can use in your Dockerfile.</p>
 
 <pre><code class="language-bash"># Get latest image
 docker pull jenkins/jenkins
@@ -245,14 +245,14 @@ docker pull jenkins/jenkins
 docker run -p 80:8080 jenkins/jenkins
 </code></pre>
 
-<p>Browse to <code>http://localhost:80</code> you immediately see some manual steps which are nice for a first Jenkins experience, but not in your development environment.
+<p>Browse to <code>http://localhost:80</code> and you immediately see some manual steps which are nice for a first Jenkins experience, but not in your development environment.
 You need to:
 - Copy a secret key from the log file,
 - Select plugins
 - Login with a default username/password
 - Create a project</p>
 
-<p>So this gives us four manual steps we want to get rid of.
+<p>So this gives us four manual steps we want to get rid off.
 To do this, we will create a Dockerfile and some initial Groovy script to configure Jenkins during start up.</p>
 
 <h2 id="setting-things-up">Setting things up</h2>
@@ -282,7 +282,7 @@ ENV JAVA_OPTS=&quot;-Djenkins.install.runSetupWizard=false&quot;
 
 <h2 id="remove-credentials">Remove Credentials</h2>
 
-<p>As a second step we do not want to login upon each restart, so we need to remove the required default credentials.
+<p>As a second step we don&rsquo;t want to login upon each restart, so we need to remove the required default credentials.
 This is done with a small Groovy script which can be added to the <code>init.groovy.d</code> directory. All Groovy files in this directory will be executed during startup.</p>
 
 <p>Created the file: <code>init.groovy.d/disable-securit.groovy</code></p>
@@ -391,7 +391,7 @@ COPY --chown=jenkins:jenkins init.groovy.d/ /var/jenkins_home/init.groovy.d/
 
 <h2 id="summarize">Summarize</h2>
 
-<p>These Dockerfile and init Groovy scripts gives a simple Jenkins image which you can run en destroy in seconds and is therefore very useful for developing Jenkinsfiles and init Groovy scripts.</p>
+<p>These Dockerfile and init Groovy scripts give a simple Jenkins image which you can run en destroy in seconds and is therefore very useful for developing Jenkinsfiles and init Groovy scripts.</p>
 
 <p>Eric Cornet <br>
 CI/CD Engineer</p>
@@ -421,7 +421,7 @@ CI/CD Engineer</p>
 <section class="author">
   <h4><a href="https://cinqict.github.io">Eric Cornet</a></h4>
   
-  <p>Automation Guru</p>
+  <p>CI/CD engineer</p>
   
   <div class="author-meta">
     <span class="author-location icon-location">Amsterdam, Netherlands</span>
