@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>nl-NL</language>
     <copyright>CINQ ICT All rights reserved - 2017</copyright>
-    <lastBuildDate>Thu, 19 Apr 2018 13:12:37 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 07 May 2018 16:00:00 +0200</lastBuildDate>
     
 	<atom:link href="https://cinqict.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Als non-techie drie dagen op KubeCon &#43; CloudNativeCon</title>
+      <link>https://cinqict.github.io/post/marc/kubecon/</link>
+      <pubDate>Mon, 07 May 2018 16:00:00 +0200</pubDate>
+      
+      <guid>https://cinqict.github.io/post/marc/kubecon/</guid>
+      <description>TL;DR: ik was als non techie 3 dagen op een tech conferentie en vond het awesome! (en ik heb 4 nieuwe t-shirts!)
+KubeCon + CloudNativeCon Van 2 tot en met 4 mei vond in het Bella Center in Kopenhagen, Denemarken KubeCon + CloudNativeCon Europe 2018 plaats. De focus van deze conferentie ligt op microservices, containers, container-ochestration en cloud native applicaties.
+Verdeeld over 2 grote ruimtes en meerdere zalen voor presentaties en demo&amp;rsquo;s, woonden ruim 4300 k8s-enthousiastelingen keynote-sessies en tech talks bij van uiteenlopende bedrijven en individuen.</description>
+    </item>
     
     <item>
       <title>Building a Jenkins development Docker image</title>

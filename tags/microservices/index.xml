@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Kubernetes on CINQ ICT Tech Blog</title>
-    <link>https://cinqict.github.io/tags/kubernetes/</link>
-    <description>Recent content in Kubernetes on CINQ ICT Tech Blog</description>
+    <title>Microservices on CINQ ICT Tech Blog</title>
+    <link>https://cinqict.github.io/tags/microservices/</link>
+    <description>Recent content in Microservices on CINQ ICT Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>nl-NL</language>
     <copyright>CINQ ICT All rights reserved - 2017</copyright>
     <lastBuildDate>Mon, 07 May 2018 16:00:00 +0200</lastBuildDate>
     
-	<atom:link href="https://cinqict.github.io/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://cinqict.github.io/tags/microservices/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -21,15 +21,6 @@
       <description>TL;DR: ik was als non techie 3 dagen op een tech conferentie en vond het awesome! (en ik heb 4 nieuwe t-shirts!)
 KubeCon + CloudNativeCon Van 2 tot en met 4 mei vond in het Bella Center in Kopenhagen, Denemarken KubeCon + CloudNativeCon Europe 2018 plaats. De focus van deze conferentie ligt op microservices, containers, container-ochestration en cloud native applicaties.
 Verdeeld over 2 grote ruimtes en meerdere zalen voor presentaties en demo&amp;rsquo;s, woonden ruim 4300 k8s-enthousiastelingen keynote-sessies en tech talks bij van uiteenlopende bedrijven en individuen.</description>
-    </item>
-    
-    <item>
-      <title>Dockercon EU 17 update: Docker goes Kubernetes</title>
-      <link>https://cinqict.github.io/post/wian/dockercon_1/</link>
-      <pubDate>Wed, 18 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://cinqict.github.io/post/wian/dockercon_1/</guid>
-      <description>De grootste aankonding tijdens de Dockercon EU 2017 general session was de integratie van Kubernetes in de Docker EE en CE toolstacks. Waarom is dit een grote aankondiging? Omdat het feitelijk betekent dat Docker afstapt van de hechte integratie met zijn eigen product Swarm en gaat bijdragen aan het Kubernetes project. Wat vooral verrassend is, is dat deze integratie al in Q1 van 2018 beschikbaar is in de productie versie van Docker EE.</description>
     </item>
     
   </channel>

@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://cinqict.github.io/post/marc/kubecon/</loc>
+    <lastmod>2018-05-07T16:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://cinqict.github.io/post/eric/jenkinsdocker/</loc>
     <lastmod>2018-04-19T13:12:37+02:00</lastmod>
   </url>
@@ -49,7 +54,7 @@
   
   <url>
     <loc>https://cinqict.github.io/</loc>
-    <lastmod>2018-04-19T13:12:37+02:00</lastmod>
+    <lastmod>2018-05-07T16:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -61,6 +66,12 @@
   <url>
     <loc>https://cinqict.github.io/tags/command-line/</loc>
     <lastmod>2017-09-07T21:26:26+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cinqict.github.io/tags/conference/</loc>
+    <lastmod>2018-05-07T16:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -78,7 +89,7 @@
   
   <url>
     <loc>https://cinqict.github.io/tags/docker/</loc>
-    <lastmod>2018-04-19T13:12:37+02:00</lastmod>
+    <lastmod>2018-05-07T16:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -132,13 +143,19 @@
   
   <url>
     <loc>https://cinqict.github.io/tags/kubernetes/</loc>
-    <lastmod>2017-10-18T00:00:00+00:00</lastmod>
+    <lastmod>2018-05-07T16:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cinqict.github.io/tags/microservices/</loc>
+    <lastmod>2018-05-07T16:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://cinqict.github.io/post/</loc>
-    <lastmod>2018-04-19T13:12:37+02:00</lastmod>
+    <lastmod>2018-05-07T16:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
