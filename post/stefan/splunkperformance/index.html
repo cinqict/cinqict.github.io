@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="nl-NL">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    
+        
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:image" content="/images/nieuwerelease.png"/>
+    
+
+
+
+<meta name="twitter:title" content="Release vs Performance met Splunk"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@cinqict"/>
+
+
+
+  	<meta property="og:title" content="Release vs Performance met Splunk &middot; CINQ ICT Tech Blog" />
+  	<meta property="og:site_name" content="CINQ ICT Tech Blog" />
+  	<meta property="og:url" content="https://cinqict.github.io/post/stefan/splunkperformance/" />
+
+    
+       <meta property="og:image" content="/images/nieuwerelease.png"/>
+    
+
+    
+    <meta property="og:description" content="" />
+  	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2018-07-10T10:00:00&#43;02:00" />
+
+    
+    <meta property="article:tag" content="splunk" />
+    
+    <meta property="article:tag" content="performance" />
+    
+    <meta property="article:tag" content="monitoring" />
+    
+    
+
+    <title>Release vs Performance met Splunk &middot; CINQ ICT Tech Blog</title>
+
+    
+    <meta name="description" content="Waar of niet waar?  De meeste IT performance verstoringen worden veroorzaakt door eigen aanpassingen op de IT omgeving.
+ Wij denken dat dit vaak waar is. Of het" />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="https://cinqict.github.io/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="https://cinqict.github.io/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="https://cinqict.github.io/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="https://cinqict.github.io/css/nav.css" />
+
+    
+
+    
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+        
+        <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+      
+          <link href="https://cinqict.github.io/index.xml" rel="alternate" type="application/rss+xml" title="CINQ ICT Tech Blog" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.31.1" />
+
+    <link rel="canonical" href="https://cinqict.github.io/post/stefan/splunkperformance/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": ,
+        "logo": https://cinqict.github.ioimages/cinq_logo.png
+    },
+    "author": {
+        "@type": "Person",
+        "name": ,
+        
+        "image": {
+            "@type": "ImageObject",
+            "url": https://cinqict.github.ioimages/cinq_logo.png,
+            "width": 250,
+            "height": 250
+        }, 
+        
+        "url": http://cinqict.nl,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ],
+        "description": my bio
+        
+    },
+    "headline": Release vs Performance met Splunk,
+    "name": Release vs Performance met Splunk,
+    "wordCount": 338,
+    "timeRequired": "PT2M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": en
+    },
+    "url": https://cinqict.github.io/post/stefan/splunkperformance/,
+    "datePublished": 2018-07-10T10:00Z,
+    "dateModified": 2018-07-10T10:00Z,
+    
+    "image": {
+        "@type": "ImageObject",
+        "url": https://cinqict.github.ioimages/nieuwerelease.png,
+        "width": 3000,
+        "height": 1445
+    },
+    
+    "keywords": splunk, performance, monitoring,
+    "description": ,
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": https://cinqict.github.io/post/stefan/splunkperformance/
+    }
+}
+    </script>
+    
+
+
+    
+
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-106769321-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+    </ul>
+
+    
+    <a class="subscribe-button icon-feed" href="https://cinqict.github.io/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+  
+  <header class="main-header post-head" style="background-image: url(/images/nieuwerelease.png)">
+  
+  <nav class="main-nav overlay clearfix">
+
+
+  
+      <a class="blog-logo" href="https://cinqict.github.io"><img src="https://cinqict.github.io/images/cinq_logo.png" alt="Home" /></a>
+  
+  
+      <a class="menu-button icon-feed" href="https://cinqict.github.io/index.xml" >&nbsp;&nbsp;Subscribe</a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">Release vs Performance met Splunk</h1>
+        <small></small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2018-07-10T10:00:00&#43;02:00">
+            Jul 10, 2018
+          </time>
+        
+         
+          <span class="post-tag small"><a href="https://cinqict.github.io/tags/splunk/">#splunk</a></span>
+         
+          <span class="post-tag small"><a href="https://cinqict.github.io/tags/performance/">#performance</a></span>
+         
+          <span class="post-tag small"><a href="https://cinqict.github.io/tags/monitoring/">#monitoring</a></span>
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      
+
+<h4 id="waar-of-niet-waar">Waar of niet waar?</h4>
+
+<blockquote>
+<p><em>De meeste IT performance verstoringen worden veroorzaakt door eigen aanpassingen op de IT omgeving.</em></p>
+</blockquote>
+
+<p>Wij denken dat dit vaak <em>waar</em> is.
+Of het nu een nieuwe release of deployment betreft: een fout zit in een klein hoekje. Automatisch testen ten spijt, is het helaas moeilijk dit volledig te voorkomen. Behalve het voorkomen, is de oplostijd ook een factor. Ieder uur dat verstrijkt in het vinden van de oorzaak brengt serviceverlies met zich mee.</p>
+
+<p>CINQ heeft hier iets op gevonden: wij brengen de performance met behulp van Splunk op functioneel niveau in kaart, en zetten deze af tegen infra releases en applicatie deployments.
+Het dashboard ziet er als volgt uit:</p>
+
+<p><img src="https://cinqict.github.io/images/overzichthosts.png" alt="overzicht hosts" width="1000" height="450"></p>
+
+<h4 id="wat-levert-dit-dashboard-mij-op">Wat levert dit dashboard mij op?</h4>
+
+<ul>
+<li>Transparant inzicht in de staat van de infrastructuur én applicaties</li>
+<li>Vermindering van incidenten</li>
+<li>Identificeer trends over tijd</li>
+</ul>
+
+<p>Met dit dashboard is direct zichtbaar welke release of deployment de verstorende factor is en is lang zoeken naar de oorzaak verleden tijd. Er kan direct worden begonnen met oplossen of zelfs tijdelijk terug worden gegaan naar een vorige goed werkende versie.</p>
+
+<p>Onderstaande grafiek geeft bijvoorbeeld duidelijk aan dat er na een release verhoogde latency optreedt. Hiervoor wordt gebruik gemaakt van verschillende informatie bronnen, die door Splunk worden geaggregeerd waardoor de relatie tussen release en verstoring duidelijk wordt.</p>
+
+<p><img src="https://cinqict.github.io/images/nieuwerelease.png" alt="latency na release" width="750" height="450"></p>
+
+<p>Omdat Splunk de logs van hardware, data, middleware en applicaties kan lezen en samen brengen in dit dashboard, is er makkelijk inzicht in staat van de omgeving op ieder moment. Daardoor zijn verstoringen op de IT-dienstverlening sneller te lokaliseren en te verhelpen.</p>
+
+<h4 id="samenvattend">Samenvattend</h4>
+
+<p>De voordelen van deze oplossing nog een keer op een rijtje:</p>
+
+<ul>
+<li>Monitor beschikbaarheid, performance in één dashboard</li>
+<li>Impact van deployment en release direct zichtbaar</li>
+<li>Vind problemen voordat deze impact hebben op de applicatie</li>
+<li>Verkort oplostijden door snelle lokalisatie van verstoringen</li>
+<li>Werk proactief aan een betrouwbare en wendbare omgeving </li>
+<li>Stel slimme alerting in en maak functionele rapportages </li>
+</ul>
+
+<h5 id="meer-weten-over-deze-oplossing">Meer weten over deze oplossing?</h5>
+
+<p>Wij maken graag een demo!
+Laat een bericht achter in de comments of neem direct contact op met <a href="https://www.linkedin.com/in/stefan-koppelaar-92967b13/">Stefan Koppelaar</a>.</p>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+
+
+
+
+
+
+
+
+<figure class="author-image">
+    <a class="img" href="https://cinqict.github.io" style="background-image: url(https://octodex.github.com/images/stormtroopocat.png)"><span class="hidden">Stefan Koppelaar's Picture</span></a>
+</figure>
+
+
+<section class="author">
+  <h4><a href="https://cinqict.github.io">Stefan Koppelaar</a></h4>
+  
+  <p>Managing Consultant Splunk</p>
+  
+  <div class="author-meta">
+    <span class="author-location icon-location">Amsterdam, Netherlands</span>
+    <span class="author-link icon-link"><a href="http://cinqict.nl">http://cinqict.nl</a></span>
+  </div>
+</section>
+
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Release%20vs%20Performance%20met%20Splunk&nbsp;-&nbsp;CINQ%20ICT%20Tech%20Blog&amp;url=https%3a%2f%2fcinqict.github.io%2fpost%2fstefan%2fsplunkperformance%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fcinqict.github.io%2fpost%2fstefan%2fsplunkperformance%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fcinqict.github.io%2fpost%2fstefan%2fsplunkperformance%2f&amp;description=Release%20vs%20Performance%20met%20Splunk"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2fcinqict.github.io%2fpost%2fstefan%2fsplunkperformance%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+<div id="disqus_thread"></div>
+<script>
+
+
+
+
+var disqus_config = function () {
+this.page.url = "https:\/\/cinqict.github.io\/post\/stefan\/splunkperformance\/";  
+this.page.identifier = "https:\/\/cinqict.github.io\/post\/stefan\/splunkperformance\/"; 
+};
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://cinqicttest.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+
+
+  </footer>
+</article>
+
+</main>
+
+
+  <aside class="read-next">
+  
+  
+      <a class="read-next-story prev" style="background-image: url(/images/kubecon2.jpg)" href="https://cinqict.github.io/post/marc/kubecon/">
+          <section class="post">
+              <h2>Als non-techie drie dagen op KubeCon &#43; CloudNativeCon</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">CINQ ICT Tech Blog</a> CINQ ICT All rights reserved - 2017</section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="https://cinqict.github.io/js/jquery.js"></script>
+    <script type="text/javascript" src="https://cinqict.github.io/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://cinqict.github.io/js/index.js"></script>
+    
+</body>
+</html>
+

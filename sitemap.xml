@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://cinqict.github.io/post/stefan/splunkperformance/</loc>
+    <lastmod>2018-07-10T10:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://cinqict.github.io/post/marc/kubecon/</loc>
     <lastmod>2018-05-07T16:00:00+02:00</lastmod>
   </url>
@@ -54,7 +59,7 @@
   
   <url>
     <loc>https://cinqict.github.io/</loc>
-    <lastmod>2018-05-07T16:00:00+02:00</lastmod>
+    <lastmod>2018-07-10T10:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -154,8 +159,20 @@
   </url>
   
   <url>
+    <loc>https://cinqict.github.io/tags/monitoring/</loc>
+    <lastmod>2018-07-10T10:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cinqict.github.io/tags/performance/</loc>
+    <lastmod>2018-07-10T10:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://cinqict.github.io/post/</loc>
-    <lastmod>2018-05-07T16:00:00+02:00</lastmod>
+    <lastmod>2018-07-10T10:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -167,7 +184,7 @@
   
   <url>
     <loc>https://cinqict.github.io/tags/splunk/</loc>
-    <lastmod>2017-12-04T13:12:37+02:00</lastmod>
+    <lastmod>2018-07-10T10:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   

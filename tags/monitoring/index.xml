@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Splunk on CINQ ICT Tech Blog</title>
-    <link>https://cinqict.github.io/tags/splunk/</link>
-    <description>Recent content in Splunk on CINQ ICT Tech Blog</description>
+    <title>Monitoring on CINQ ICT Tech Blog</title>
+    <link>https://cinqict.github.io/tags/monitoring/</link>
+    <description>Recent content in Monitoring on CINQ ICT Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>nl-NL</language>
     <copyright>CINQ ICT All rights reserved - 2017</copyright>
     <lastBuildDate>Tue, 10 Jul 2018 10:00:00 +0200</lastBuildDate>
     
-	<atom:link href="https://cinqict.github.io/tags/splunk/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://cinqict.github.io/tags/monitoring/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,16 +20,6 @@
       <guid>https://cinqict.github.io/post/stefan/splunkperformance/</guid>
       <description>Waar of niet waar?  De meeste IT performance verstoringen worden veroorzaakt door eigen aanpassingen op de IT omgeving.
  Wij denken dat dit vaak waar is. Of het nu een nieuwe release of deployment betreft: een fout zit in een klein hoekje. Automatisch testen ten spijt, is het helaas moeilijk dit volledig te voorkomen. Behalve het voorkomen, is de oplostijd ook een factor. Ieder uur dat verstrijkt in het vinden van de oorzaak brengt serviceverlies met zich mee.</description>
-    </item>
-    
-    <item>
-      <title>Splunk Live!</title>
-      <link>https://cinqict.github.io/post/bas/splunklive1/</link>
-      <pubDate>Mon, 04 Dec 2017 13:12:37 +0200</pubDate>
-      
-      <guid>https://cinqict.github.io/post/bas/splunklive1/</guid>
-      <description>Afgelopen 21 November was &amp;ldquo;Splunk Live!&amp;rdquo; In de Jaarbeurs in Utrecht. Een evenement dat ieder jaar groter wordt. Het is goed te merken dat Splunk booming is!
-De dag begon met presentaties van bedrijven die uitleggen hoe ze Splunk gebruiken en wat hen dat oplevert. Vooral Coolblue en ABN Amro hadden hierin een mooi verhaal. CoolBlue legde uit hoe en waarom zij van een ELK-stack omgeving gemigreerd zijn naar AWS met Splunk, en ABN-AMRO liet zien hoe zij met Splunk hun SOC effectiever maken.</description>
     </item>
     
   </channel>

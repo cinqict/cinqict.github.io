@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>nl-NL</language>
     <copyright>CINQ ICT All rights reserved - 2017</copyright>
-    <lastBuildDate>Mon, 07 May 2018 16:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 10 Jul 2018 10:00:00 +0200</lastBuildDate>
     
 	<atom:link href="https://cinqict.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Release vs Performance met Splunk</title>
+      <link>https://cinqict.github.io/post/stefan/splunkperformance/</link>
+      <pubDate>Tue, 10 Jul 2018 10:00:00 +0200</pubDate>
+      
+      <guid>https://cinqict.github.io/post/stefan/splunkperformance/</guid>
+      <description>Waar of niet waar?  De meeste IT performance verstoringen worden veroorzaakt door eigen aanpassingen op de IT omgeving.
+ Wij denken dat dit vaak waar is. Of het nu een nieuwe release of deployment betreft: een fout zit in een klein hoekje. Automatisch testen ten spijt, is het helaas moeilijk dit volledig te voorkomen. Behalve het voorkomen, is de oplostijd ook een factor. Ieder uur dat verstrijkt in het vinden van de oorzaak brengt serviceverlies met zich mee.</description>
+    </item>
     
     <item>
       <title>Als non-techie drie dagen op KubeCon &#43; CloudNativeCon</title>
