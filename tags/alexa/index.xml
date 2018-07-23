@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Alexa on CINQ ICT Tech Blog</title>
+    <link>https://cinqict.github.io/tags/alexa/</link>
+    <description>Recent content in Alexa on CINQ ICT Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>nl-NL</language>
+    <copyright>CINQ ICT All rights reserved - 2017</copyright>
+    <lastBuildDate>Mon, 23 Jul 2018 10:00:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://cinqict.github.io/tags/alexa/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Voice adventure voor Google Assistant</title>
+      <link>https://cinqict.github.io/post/bouke/javamag/</link>
+      <pubDate>Mon, 23 Jul 2018 10:00:00 +0200</pubDate>
+      
+      <guid>https://cinqict.github.io/post/bouke/javamag/</guid>
+      <description>Artikel verscheen in Java Magazine 03-2018. Het Java Magazine is een uitgave van Java User Group Nederland. Lid worden doe je hier: https://nljug.org/lidworden/</description>
+    </item>
+    
+  </channel>
+</rss>

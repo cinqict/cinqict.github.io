@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="nl-NL">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    
+        
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:image" content="/images/javamag-bouke-1.png"/>
+    
+
+
+
+<meta name="twitter:title" content="Voice adventure voor Google Assistant"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@cinqict"/>
+
+
+
+  	<meta property="og:title" content="Voice adventure voor Google Assistant &middot; CINQ ICT Tech Blog" />
+  	<meta property="og:site_name" content="CINQ ICT Tech Blog" />
+  	<meta property="og:url" content="https://cinqict.github.io/post/bouke/javamag/" />
+
+    
+       <meta property="og:image" content="/images/javamag-bouke-1.png"/>
+    
+
+    
+    <meta property="og:description" content="" />
+  	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2018-07-23T10:00:00&#43;02:00" />
+
+    
+    <meta property="article:tag" content="java" />
+    
+    <meta property="article:tag" content="nljug" />
+    
+    <meta property="article:tag" content="GoogleAssistant" />
+    
+    <meta property="article:tag" content="voice" />
+    
+    <meta property="article:tag" content="game" />
+    
+    
+
+    <title>Voice adventure voor Google Assistant &middot; CINQ ICT Tech Blog</title>
+
+    
+    <meta name="description" content="Dit artikel van onze Java eindbaas Bouke verscheen in print in het Java Magazine 03-2018. Het magazine is een uitgave van de Nederlandse Java User Group.
+Je kun" />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="https://cinqict.github.io/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="https://cinqict.github.io/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="https://cinqict.github.io/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="https://cinqict.github.io/css/nav.css" />
+
+    
+
+    
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+        
+        <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+      
+          <link href="https://cinqict.github.io/index.xml" rel="alternate" type="application/rss+xml" title="CINQ ICT Tech Blog" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.31.1" />
+
+    <link rel="canonical" href="https://cinqict.github.io/post/bouke/javamag/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": ,
+        "logo": https://cinqict.github.ioimages/cinq_logo.png
+    },
+    "author": {
+        "@type": "Person",
+        "name": ,
+        
+        "image": {
+            "@type": "ImageObject",
+            "url": https://cinqict.github.ioimages/cinq_logo.png,
+            "width": 250,
+            "height": 250
+        }, 
+        
+        "url": http://cinqict.nl,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ],
+        "description": my bio
+        
+    },
+    "headline": Voice adventure voor Google Assistant,
+    "name": Voice adventure voor Google Assistant,
+    "wordCount": 63,
+    "timeRequired": "PT1M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": en
+    },
+    "url": https://cinqict.github.io/post/bouke/javamag/,
+    "datePublished": 2018-07-23T10:00Z,
+    "dateModified": 2018-07-23T10:00Z,
+    
+    "image": {
+        "@type": "ImageObject",
+        "url": https://cinqict.github.ioimages/javamag-bouke-1.png,
+        "width": 3000,
+        "height": 1445
+    },
+    
+    "keywords": java, nljug, GoogleAssistant, voice, game,
+    "description": ,
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": https://cinqict.github.io/post/bouke/javamag/
+    }
+}
+    </script>
+    
+
+
+    
+
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-106769321-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+    </ul>
+
+    
+    <a class="subscribe-button icon-feed" href="https://cinqict.github.io/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+  
+  <header class="main-header post-head" style="background-image: url(/images/javamag-bouke-1.png)">
+  
+  <nav class="main-nav overlay clearfix">
+
+
+  
+      <a class="blog-logo" href="https://cinqict.github.io"><img src="https://cinqict.github.io/images/cinq_logo.png" alt="Home" /></a>
+  
+  
+      <a class="menu-button icon-feed" href="https://cinqict.github.io/index.xml" >&nbsp;&nbsp;Subscribe</a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">Voice adventure voor Google Assistant</h1>
+        <small></small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2018-07-23T10:00:00&#43;02:00">
+            Jul 23, 2018
+          </time>
+        
+         
+          <span class="post-tag small"><a href="https://cinqict.github.io/tags/java/">#java</a></span>
+         
+          <span class="post-tag small"><a href="https://cinqict.github.io/tags/nljug/">#nljug</a></span>
+         
+          <span class="post-tag small"><a href="https://cinqict.github.io/tags/googleassistant/">#GoogleAssistant</a></span>
+         
+          <span class="post-tag small"><a href="https://cinqict.github.io/tags/voice/">#voice</a></span>
+         
+          <span class="post-tag small"><a href="https://cinqict.github.io/tags/game/">#game</a></span>
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      <p>Dit artikel van onze Java eindbaas Bouke verscheen in print in het Java Magazine 03-2018. Het magazine is een uitgave van de Nederlandse Java User Group.</p>
+
+<p>Je kunt het volledige artikel <a href="https://cinqict.github.io/images/javamagfullarticle.pdf">hier</a> in pdf formaat downloaden, of hier onder lezen als je erg goede ogen hebt.</p>
+
+<p>Ook het Java Magazine ontvangen? <a href="https://nljug.org/lidworden/">Lid worden van NLJUG en abonneren op het magazine doe je hier</a>.</p>
+
+<p><img src="https://cinqict.github.io/images/javamag-bouke-1.png" alt="Part 1" width="1400" height="900">
+<img src="https://cinqict.github.io/images/javamag-bouke-2.png" alt="Part 2" width="1400" height="900"></p>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+
+
+
+
+
+
+
+
+<figure class="author-image">
+    <a class="img" href="https://cinqict.github.io" style="background-image: url(https://octodex.github.com/images/class-act.png)"><span class="hidden">Bouke Nijhuis's Picture</span></a>
+</figure>
+
+
+<section class="author">
+  <h4><a href="https://cinqict.github.io">Bouke Nijhuis</a></h4>
+  
+  <p>Boss-level Java developer</p>
+  
+  <div class="author-meta">
+    <span class="author-location icon-location">Amsterdam, Netherlands</span>
+    <span class="author-link icon-link"><a href="http://cinqict.nl">http://cinqict.nl</a></span>
+  </div>
+</section>
+
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Voice%20adventure%20voor%20Google%20Assistant&nbsp;-&nbsp;CINQ%20ICT%20Tech%20Blog&amp;url=https%3a%2f%2fcinqict.github.io%2fpost%2fbouke%2fjavamag%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fcinqict.github.io%2fpost%2fbouke%2fjavamag%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fcinqict.github.io%2fpost%2fbouke%2fjavamag%2f&amp;description=Voice%20adventure%20voor%20Google%20Assistant"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2fcinqict.github.io%2fpost%2fbouke%2fjavamag%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+<div id="disqus_thread"></div>
+<script>
+
+
+
+
+var disqus_config = function () {
+this.page.url = "https:\/\/cinqict.github.io\/post\/bouke\/javamag\/";  
+this.page.identifier = "https:\/\/cinqict.github.io\/post\/bouke\/javamag\/"; 
+};
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://cinqicttest.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+
+
+  </footer>
+</article>
+
+</main>
+
+
+  <aside class="read-next">
+  
+  
+      <a class="read-next-story prev" style="background-image: url(/images/nieuwerelease.png)" href="https://cinqict.github.io/post/stefan/splunkperformance/">
+          <section class="post">
+              <h2>Release vs Performance met Splunk</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">CINQ ICT Tech Blog</a> CINQ ICT All rights reserved - 2017</section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="https://cinqict.github.io/js/jquery.js"></script>
+    <script type="text/javascript" src="https://cinqict.github.io/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://cinqict.github.io/js/index.js"></script>
+    
+</body>
+</html>
+
