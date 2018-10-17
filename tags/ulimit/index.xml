@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ulimit on CINQ ICT Tech Blog</title>
+    <link>https://cinqict.github.io/tags/ulimit/</link>
+    <description>Recent content in Ulimit on CINQ ICT Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>nl-NL</language>
+    <copyright>CINQ ICT All rights reserved - 2018</copyright>
+    <lastBuildDate>Tue, 16 Oct 2018 10:00:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://cinqict.github.io/tags/ulimit/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Splunk best practice: Linux THP en Ulimit settings</title>
+      <link>https://cinqict.github.io/post/bob/splunkthpulimit/</link>
+      <pubDate>Tue, 16 Oct 2018 10:00:00 +0200</pubDate>
+      
+      <guid>https://cinqict.github.io/post/bob/splunkthpulimit/</guid>
+      <description>door Bob Nieuwenhuis &amp;amp; Matthias van den Berg 
+Wanneer je Splunk installeert op een Linux systeem is het in bijna alle gevallen aan te raden om specifieke settings op Linux aan te passen voor een betere performance van Splunk.
+In deze post noemen we twee van deze settings, die belangrijk zijn om aan te passen op een Linux systeem: THP en Ulimit.
+THP  &amp;ldquo;THP has been associated with degradation of Splunk Enterprise performance in at least some Linux kernel versions (for example, the 2.</description>
+    </item>
+    
+  </channel>
+</rss>

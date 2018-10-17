@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="nl-NL">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    
+        
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:image" content="/images/indexanydata.png"/>
+    
+
+
+
+<meta name="twitter:title" content="Splunk best practice: Linux THP en Ulimit settings"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@cinqict"/>
+
+
+
+  	<meta property="og:title" content="Splunk best practice: Linux THP en Ulimit settings &middot; CINQ ICT Tech Blog" />
+  	<meta property="og:site_name" content="CINQ ICT Tech Blog" />
+  	<meta property="og:url" content="https://cinqict.github.io/post/bob/splunkthpulimit/" />
+
+    
+       <meta property="og:image" content="/images/indexanydata.png"/>
+    
+
+    
+    <meta property="og:description" content="" />
+  	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2018-10-16T10:00:00&#43;02:00" />
+
+    
+    <meta property="article:tag" content="splunk" />
+    
+    <meta property="article:tag" content="thp" />
+    
+    <meta property="article:tag" content="ulimit" />
+    
+    <meta property="article:tag" content="linux" />
+    
+    <meta property="article:tag" content="data" />
+    
+    
+
+    <title>Splunk best practice: Linux THP en Ulimit settings &middot; CINQ ICT Tech Blog</title>
+
+    
+    <meta name="description" content="door Bob Nieuwenhuis &amp;amp; Matthias van den Berg 
+Wanneer je Splunk installeert op een Linux systeem is het in bijna alle gevallen aan te raden om specifieke se" />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="https://cinqict.github.io/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="https://cinqict.github.io/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="https://cinqict.github.io/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="https://cinqict.github.io/css/nav.css" />
+
+    
+
+    
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+        
+        <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+      
+          <link href="https://cinqict.github.io/index.xml" rel="alternate" type="application/rss+xml" title="CINQ ICT Tech Blog" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.31.1" />
+
+    <link rel="canonical" href="https://cinqict.github.io/post/bob/splunkthpulimit/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": ,
+        "logo": https://cinqict.github.ioimages/cinq_logo.png
+    },
+    "author": {
+        "@type": "Person",
+        "name": ,
+        
+        "image": {
+            "@type": "ImageObject",
+            "url": https://cinqict.github.ioimages/cinq_logo.png,
+            "width": 250,
+            "height": 250
+        }, 
+        
+        "url": http://cinqict.nl,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ],
+        "description": my bio
+        
+    },
+    "headline": Splunk best practice: Linux THP en Ulimit settings,
+    "name": Splunk best practice: Linux THP en Ulimit settings,
+    "wordCount": 803,
+    "timeRequired": "PT4M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": en
+    },
+    "url": https://cinqict.github.io/post/bob/splunkthpulimit/,
+    "datePublished": 2018-10-16T10:00Z,
+    "dateModified": 2018-10-16T10:00Z,
+    
+    "image": {
+        "@type": "ImageObject",
+        "url": https://cinqict.github.ioimages/indexanydata.png,
+        "width": 3000,
+        "height": 1445
+    },
+    
+    "keywords": splunk, thp, ulimit, linux, data,
+    "description": ,
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": https://cinqict.github.io/post/bob/splunkthpulimit/
+    }
+}
+    </script>
+    
+
+
+    
+
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-106769321-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+    </ul>
+
+    
+    <a class="subscribe-button icon-feed" href="https://cinqict.github.io/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+  
+  <header class="main-header post-head" style="background-image: url(/images/indexanydata.png)">
+  
+  <nav class="main-nav overlay clearfix">
+
+
+  
+      <a class="blog-logo" href="https://cinqict.github.io"><img src="https://cinqict.github.io/images/cinq_logo.png" alt="Home" /></a>
+  
+  
+      <a class="menu-button icon-feed" href="https://cinqict.github.io/index.xml" >&nbsp;&nbsp;Subscribe</a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">Splunk best practice: Linux THP en Ulimit settings</h1>
+        <small></small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2018-10-16T10:00:00&#43;02:00">
+            Oct 16, 2018
+          </time>
+        
+         
+          <span class="post-tag small"><a href="https://cinqict.github.io/tags/splunk/">#splunk</a></span>
+         
+          <span class="post-tag small"><a href="https://cinqict.github.io/tags/thp/">#thp</a></span>
+         
+          <span class="post-tag small"><a href="https://cinqict.github.io/tags/ulimit/">#ulimit</a></span>
+         
+          <span class="post-tag small"><a href="https://cinqict.github.io/tags/linux/">#linux</a></span>
+         
+          <span class="post-tag small"><a href="https://cinqict.github.io/tags/data/">#data</a></span>
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      
+
+<p><small> <em>door Bob Nieuwenhuis &amp; Matthias van den Berg</em> </small></p>
+
+<p>Wanneer je Splunk installeert op een Linux systeem is het in bijna alle gevallen aan te raden om specifieke settings op Linux aan te passen voor een betere performance van Splunk.</p>
+
+<p>In deze post noemen we twee van deze settings, die belangrijk zijn om aan te passen op een Linux systeem: <strong>THP en Ulimit.</strong></p>
+
+<h5 id="thp">THP</h5>
+
+<blockquote>
+<p>&ldquo;THP has been associated with degradation of Splunk Enterprise performance in at least some Linux kernel versions (for example, the 2.6.32 kernel used in Red Hat Enterprise Linux 6). When enabled, THP can significantly degrade overall system performance on systems that run Splunk Enterprise because of several issues:&rdquo;</p>
+</blockquote>
+
+<p>Deze quote uit de Splunk documentatie zegt genoeg. Voor een betere performance zullen we THP dus moeten disablen.
+Meer over Transparent Huge Pages vind je via de volgende link: <a href="https://docs.splunk.com/Documentation/Splunk/latest/ReleaseNotes/SplunkandTHP">THP</a></p>
+
+<h5 id="step-by-step-guide-thp-settings">Step-by-step guide THP settings</h5>
+
+<p>Volg onderstaande stappen om de settings voor THP persistent te maken:</p>
+
+<ul>
+<li>Ga naar <code>/etc/rc.d</code> op het Linux file systeem</li>
+<li>Pas de file rc.local aan met de onderstaande settings</li>
+</ul>
+
+<pre><code>rc.local
+touch /var/lock/subsys/local
+if test -f /sys/kernel/mm/transparent_hugepage/enabled;
+then
+echo never &gt; /sys/kernel/mm/transparent_hugepage/enabled
+fi
+if test -f /sys/kernel/mm/transparent_hugepage/defrag;
+then
+echo never &gt; /sys/kernel/mm/transparent_hugepage/defrag
+fi
+</code></pre>
+
+<h5 id="executable">Executable</h5>
+
+<p>Vergeet niet om het bestand rc.local executable te maken →
+<code>chmod ug+x rc.local</code></p>
+
+<p>Na een reboot van het Linux systeem staan deze waardes nu goed voor Splunk.
+Mochten de waardes (nog) niet goed staan, dan kun je deze dynamisch aanpassen. Je hoeft Splunk dus niet te herstarten.</p>
+
+<p>Vanaf de CLI:</p>
+
+<pre><code>echo never &gt; /sys/kernel/mm/transparent_hugepage/enabled
+echo never &gt; /sys/kernel/mm/transparent_hugepage/defrag
+</code></pre>
+
+<p>Controle doe je door het uitvoeren van een cat op de files:</p>
+
+<pre><code>[root@machineXYZ rc.d]# cat /sys/kernel/mm/transparent_hugepage/enabled
+always madvise [never]
+[root@machineXYZ rc.d]# cat /sys/kernel/mm/transparent_hugepage/defrag
+always madvise [never]
+</code></pre>
+
+<p>De setting tussen de [ ] geeft de huidige waarde aan en deze is per direct actief.</p>
+
+<h4 id="ulimits">Ulimits</h4>
+
+<p>Daarnaast is het van belang om er voor te zorgen dat je de <em>ulimits</em> van Linux juist instelt voor betere performance van je Splunk omgeving.
+Voor meer info over ulimits uit de Splunk documentatie: <a href="http://docs.splunk.com/Documentation/Splunk/latest/Installation/Systemrequirements#Considerations_regarding_system-wide_resource_limits_on_.2Anix_systems">klik hier</a></p>
+
+<h5 id="step-by-step-guide-ulimits">Step-by-step guide ulimits</h5>
+
+<p>Om hier persistent de juiste waarde voor je systemen aan toe te kennen voer je de volgende acties uit:</p>
+
+<ul>
+<li>Run een Health Check vanuit de Monitoring Console op de Master Node en bekijk het rapport</li>
+<li>Bij een andere uitkomst dan <em>success</em> volg je de hieronder beschreven actie</li>
+</ul>
+
+<p>Maak een file aan in de directory <code>/etc/security/limits.d/</code> met de naam 99-splunk.conf (of een andere naam) met de volgende inhoud:</p>
+
+<pre><code>99-splunk.conf
+splunk hard core 0
+splunk hard maxlogins 10
+splunk soft nofile 65535
+splunk hard nofile 65535
+splunk soft nproc 20480
+splunk hard nproc 20480
+splunk soft fsize unlimited
+splunk hard fsize unlimited
+</code></pre>
+
+<p>Let op, wanneer je een andere user gebruikt dan Splunk, dan moet je uiteraard de naam van deze user hier invullen! Believe me it happens&hellip;
+Je maakt deze file aan in limits.d in plaats van het aanpassen van de limits.conf in <code>/etc/security</code>, dit in verband met eventuele automatisering van het bestand. De waardes zijn aanbevolen waardes vanuit Splunk Professional Services.</p>
+
+<p>Een <a href="https://answers.splunk.com/answers/590209/rhelcentos-7-systemd-not-honoring-ulimits.html">bekend probleem</a> is dat deze settings niet altijd worden overgenomen.
+Zoals ik al zei je komt een heel eind met Google ;)
+Om dit werkend te krijgen is een aanpassing nodig in het start script voor Splunk in de init.d directory.</p>
+
+<p><code>/etc/init.d/splunk</code> aanpassen met de volgende waardes:</p>
+
+<pre><code>splunk start script
+
+#!/bin/sh
+#
+# /etc/init.d/splunk
+# init script for Splunk.
+# generated by 'splunk enable boot-start'.
+#
+# chkconfig: 2345 90 60
+# description: Splunk indexer service
+#
+RETVAL=0
+ 
+. /etc/init.d/functions
+ 
+splunk_start() {
+  echo Starting Splunk...
+  ulimit -Hn 65535
+  ulimit -Sn 65535
+  &quot;/opt/splunk/bin/splunk&quot; start --no-prompt --answer-yes
+  RETVAL=$?
+  [ $RETVAL -eq 0 ] &amp;&amp; touch /var/lock/subsys/splunk
+}
+splunk_stop() {
+  echo Stopping Splunk...
+  &quot;/opt/splunk/bin/splunk&quot; stop
+  RETVAL=$?
+  [ $RETVAL -eq 0 ] &amp;&amp; rm -f /var/lock/subsys/splunk
+}
+splunk_restart() {
+  echo Restarting Splunk...
+  &quot;/opt/splunk/bin/splunk&quot; restart
+  RETVAL=$?
+  [ $RETVAL -eq 0 ] &amp;&amp; touch /var/lock/subsys/splunk
+}
+splunk_status() {
+  echo Splunk status:
+  &quot;/opt/splunk/bin/splunk&quot; status
+  RETVAL=$?
+}
+case &quot;$1&quot; in
+  start)
+    splunk_start
+    ;;
+  stop)
+    splunk_stop
+    ;;
+  restart)
+    splunk_restart
+    ;;
+  status)
+    splunk_status
+    ;;
+  *)
+    echo &quot;Usage: $0 {start|stop|restart|status}&quot;
+    exit 1
+    ;;
+esac
+ 
+exit $RETVAL
+</code></pre>
+
+<p>In bovenstaand script is het volgende aangepast:</p>
+
+<pre><code>echo Starting Splunk...
+ ulimit -Hn 65535
+ ulimit -Sn 65535
+</code></pre>
+
+<p>Door bovenstaande wijziging staan de ulimits bij een restart van Splunk goed voor Splunk. Let op!! Je moet eerst de betreffende Splunk instantie stoppen en daarna starten. Splunk restart werkt niet.  De overige settings uit limits.d worden alleen actief bij een reboot, dit kun je plannen.</p>
+
+<p>We hopen dat we je Splunk omgeving hiermee weer een beetje beter en sneller hebben gemaakt. Je kunt de toegepaste settings opnieuw controleren in de health check op de master, deze zouden nu allemaal een positief resultaat laten zien.</p>
+
+<p>Wil je hier meer over weten of kom je er niet helemaal uit? Laat een reactie achter in de comments of <a href="mailto:bob@cinqict.nl">stuur een berichtje naar Bob</a> of <a href="mailto:matthias@cinqict.nl">Matthias!</a></p>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+
+
+
+
+
+
+
+
+<figure class="author-image">
+    <a class="img" href="https://cinqict.github.io" style="background-image: url(https://octodex.github.com/images/topguntocat.png)"><span class="hidden">Bob Nieuwenhuis &amp; Matthias van den Berg 's Picture</span></a>
+</figure>
+
+
+<section class="author">
+  <h4><a href="https://cinqict.github.io">Bob Nieuwenhuis &amp; Matthias van den Berg </a></h4>
+  
+  <p>Splunk specialists</p>
+  
+  <div class="author-meta">
+    <span class="author-location icon-location">Amsterdam, Netherlands</span>
+    <span class="author-link icon-link"><a href="http://cinqict.nl">http://cinqict.nl</a></span>
+  </div>
+</section>
+
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Splunk%20best%20practice%3a%20Linux%20THP%20en%20Ulimit%20settings&nbsp;-&nbsp;CINQ%20ICT%20Tech%20Blog&amp;url=https%3a%2f%2fcinqict.github.io%2fpost%2fbob%2fsplunkthpulimit%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fcinqict.github.io%2fpost%2fbob%2fsplunkthpulimit%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fcinqict.github.io%2fpost%2fbob%2fsplunkthpulimit%2f&amp;description=Splunk%20best%20practice%3a%20Linux%20THP%20en%20Ulimit%20settings"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2fcinqict.github.io%2fpost%2fbob%2fsplunkthpulimit%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+<div id="disqus_thread"></div>
+<script>
+
+
+
+
+var disqus_config = function () {
+this.page.url = "https:\/\/cinqict.github.io\/post\/bob\/splunkthpulimit\/";  
+this.page.identifier = "https:\/\/cinqict.github.io\/post\/bob\/splunkthpulimit\/"; 
+};
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://cinqicttest.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+
+
+  </footer>
+</article>
+
+</main>
+
+
+  <aside class="read-next">
+  
+  
+      <a class="read-next-story prev" style="background-image: url(/images/javamag-bouke-1.png)" href="https://cinqict.github.io/post/bouke/javamag/">
+          <section class="post">
+              <h2>Voice adventure voor Google Assistant</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">CINQ ICT Tech Blog</a> CINQ ICT All rights reserved - 2018</section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="https://cinqict.github.io/js/jquery.js"></script>
+    <script type="text/javascript" src="https://cinqict.github.io/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://cinqict.github.io/js/index.js"></script>
+    
+</body>
+</html>
+
