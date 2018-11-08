@@ -18,8 +18,7 @@
       <pubDate>Tue, 16 Oct 2018 10:00:00 +0200</pubDate>
       
       <guid>https://cinqict.github.io/post/bob/splunkthpulimit/</guid>
-      <description>door Bob Nieuwenhuis &amp;amp; Matthias van den Berg 
-Wanneer je Splunk installeert op een Linux systeem is het in bijna alle gevallen aan te raden om specifieke settings op Linux aan te passen voor een betere performance van Splunk.
+      <description>Wanneer je Splunk installeert op een Linux systeem is het in bijna alle gevallen aan te raden om specifieke settings op Linux aan te passen voor een betere performance van Splunk.
 In deze post noemen we twee van deze settings, die belangrijk zijn om aan te passen op een Linux systeem: THP en Ulimit.
 THP  &amp;ldquo;THP has been associated with degradation of Splunk Enterprise performance in at least some Linux kernel versions (for example, the 2.</description>
     </item>
