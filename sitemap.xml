@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://cinqict.github.io/post/roy/5x-kubernetes/</loc>
+    <lastmod>2018-11-20T14:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://cinqict.github.io/post/bob/splunkthpulimit/</loc>
     <lastmod>2018-10-16T10:00:00+02:00</lastmod>
   </url>
@@ -69,7 +74,7 @@
   
   <url>
     <loc>https://cinqict.github.io/</loc>
-    <lastmod>2018-10-16T10:00:00+02:00</lastmod>
+    <lastmod>2018-11-20T14:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -87,6 +92,12 @@
   <url>
     <loc>https://cinqict.github.io/tags/conference/</loc>
     <lastmod>2018-05-07T16:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cinqict.github.io/tags/containers/</loc>
+    <lastmod>2018-11-20T14:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -145,6 +156,12 @@
   </url>
   
   <url>
+    <loc>https://cinqict.github.io/tags/howto/</loc>
+    <lastmod>2018-11-20T14:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://cinqict.github.io/tags/idioms/</loc>
     <lastmod>2017-10-04T10:12:37+02:00</lastmod>
     <priority>0</priority>
@@ -176,7 +193,7 @@
   
   <url>
     <loc>https://cinqict.github.io/tags/kubernetes/</loc>
-    <lastmod>2018-05-07T16:00:00+02:00</lastmod>
+    <lastmod>2018-11-20T14:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -212,7 +229,7 @@
   
   <url>
     <loc>https://cinqict.github.io/post/</loc>
-    <lastmod>2018-10-16T10:00:00+02:00</lastmod>
+    <lastmod>2018-11-20T14:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   

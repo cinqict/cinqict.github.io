@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="nl-NL">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    
+        
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:image" content="/images/k8s.png"/>
+    
+
+
+
+<meta name="twitter:title" content="5 x aan de slag met Kubernetes"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@cinqict"/>
+
+
+
+  	<meta property="og:title" content="5 x aan de slag met Kubernetes &middot; CINQ ICT Tech Blog" />
+  	<meta property="og:site_name" content="CINQ ICT Tech Blog" />
+  	<meta property="og:url" content="https://cinqict.github.io/post/roy/5x-kubernetes/" />
+
+    
+       <meta property="og:image" content="/images/k8s.png"/>
+    
+
+    
+    <meta property="og:description" content="" />
+  	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2018-11-20T14:00:00&#43;02:00" />
+
+    
+    <meta property="article:tag" content="kubernetes" />
+    
+    <meta property="article:tag" content="containers" />
+    
+    <meta property="article:tag" content="howto" />
+    
+    
+
+    <title>5 x aan de slag met Kubernetes &middot; CINQ ICT Tech Blog</title>
+
+    
+    <meta name="description" content="Container orchestration met Kubernetes (k8s) is hot, we kunnen er gewoonweg niet meer omheen. Hieronder vind je 5 manieren om te beginnen met het opzetten van j" />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="https://cinqict.github.io/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="https://cinqict.github.io/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="https://cinqict.github.io/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="https://cinqict.github.io/css/nav.css" />
+
+    
+
+    
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+        
+        <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+      
+          <link href="https://cinqict.github.io/index.xml" rel="alternate" type="application/rss+xml" title="CINQ ICT Tech Blog" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.31.1" />
+
+    <link rel="canonical" href="https://cinqict.github.io/post/roy/5x-kubernetes/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": ,
+        "logo": https://cinqict.github.ioimages/cinq_logo.png
+    },
+    "author": {
+        "@type": "Person",
+        "name": ,
+        
+        "image": {
+            "@type": "ImageObject",
+            "url": https://cinqict.github.ioimages/cinq_logo.png,
+            "width": 250,
+            "height": 250
+        }, 
+        
+        "url": http://cinqict.nl,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ],
+        "description": my bio
+        
+    },
+    "headline": 5 x aan de slag met Kubernetes,
+    "name": 5 x aan de slag met Kubernetes,
+    "wordCount": 597,
+    "timeRequired": "PT3M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": en
+    },
+    "url": https://cinqict.github.io/post/roy/5x-kubernetes/,
+    "datePublished": 2018-11-20T14:00Z,
+    "dateModified": 2018-11-20T14:00Z,
+    
+    "image": {
+        "@type": "ImageObject",
+        "url": https://cinqict.github.ioimages/k8s.png,
+        "width": 3000,
+        "height": 1445
+    },
+    
+    "keywords": kubernetes, containers, howto,
+    "description": ,
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": https://cinqict.github.io/post/roy/5x-kubernetes/
+    }
+}
+    </script>
+    
+
+
+    
+
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-106769321-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+    </ul>
+
+    
+    <a class="subscribe-button icon-feed" href="https://cinqict.github.io/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+  
+  <header class="main-header post-head" style="background-image: url(/images/k8s.png)">
+  
+  <nav class="main-nav overlay clearfix">
+
+
+  
+      <a class="blog-logo" href="https://cinqict.github.io"><img src="https://cinqict.github.io/images/cinq_logo.png" alt="Home" /></a>
+  
+  
+      <a class="menu-button icon-feed" href="https://cinqict.github.io/index.xml" >&nbsp;&nbsp;Subscribe</a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">5 x aan de slag met Kubernetes</h1>
+        <small></small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2018-11-20T14:00:00&#43;02:00">
+            Nov 20, 2018
+          </time>
+        
+         
+          <span class="post-tag small"><a href="https://cinqict.github.io/tags/kubernetes/">#kubernetes</a></span>
+         
+          <span class="post-tag small"><a href="https://cinqict.github.io/tags/containers/">#containers</a></span>
+         
+          <span class="post-tag small"><a href="https://cinqict.github.io/tags/howto/">#howto</a></span>
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      
+
+<p>Container orchestration met <a href="https://kubernetes.io">Kubernetes</a> (k8s) is hot, we kunnen er gewoonweg niet meer omheen. Hieronder vind je 5 manieren om te beginnen met het opzetten van je eigen clusters, zodat je kunt starten met je eigen onderzoek naar container orchestration met Kubernetes.</p>
+
+<h3 id="minikube">Minikube</h3>
+
+<p><a href="https://github.com/kubernetes/minikube">Minikube</a> is een open-source project van Kubernetes en eigenlijk de snelste en meest eenvoudige manier om Kubernetes uit te proberen. Je download een binary en daarmee zet je op je eigen machine een klein maar volledig functioneel Kubernetes cluster op. Perfect als lokale development omgeving maar niet meer dan dat.</p>
+
+<h3 id="hosted">Hosted</h3>
+
+<p>Inmiddels zijn er legio oplossingen om in de cloud managed k8s clusters af te nemen. Een paar voorbeelden zijn <a href="https://aws.amazon.com/eks/">Amazon EKS</a>, <a href="https://azure.microsoft.com/en-us/services/kubernetes-service/">Microsoft AKS</a> en <a href="https://cloud.google.com/kubernetes-engine/">Google Kubernetes Engine</a>. Het mooiste aan deze oplossingen is dat je niets hoeft mee te nemen behalve een creditcard. Met een paar simpele kliks of API calls staat er een werkend cluster voor je klaar en kun je meteen aan de slag en je hoeft je niet druk te maken over het cluster zelf want dat wordt gemanaged door de leverancier. Wil je echter met de latest and greatest mogelijkheden van een nieuwe k8s versie aan de slag dan gaat dat wat moeilijker, de meeste managed oplossingen draaien niet de laatste versie van Kubernetes.</p>
+
+<p>Meer hosted en andere k8s distributies zijn te vinden op de <a href="https://kubernetes.io/partners/#conformance">partner pagina</a> van Kubernetes.</p>
+
+<h3 id="rancher-2-0">Rancher 2.0</h3>
+
+<p><a href="https://rancher.com">Rancher</a> is al een aantal jaar een speler op het gebied van container orchestration. In eerste instantie met hun eigen orchestrator (Cattle) en ondersteuning voor een aantal andere (Mesos, Kubernetes) maar sinds versie 2.0 richten ze zich volledig op Kubernetes.</p>
+
+<p>Rancher draait in een container waar je maar wil en kan zelf clusters aanmaken op verschillende manieren. Je kunt gebruik maken van allerlei cloud providers waar Rancher dan zelf een k8s cluster op installeert of je laat Rancher managed clusters aanmaken bij Amazon AWS, Microsoft Azure of Google.</p>
+
+<p>Het mooie is dat Rancher je in staat stelt om meerdere clusters te beheren ongeacht locatie of onderliggend platform. Daarnaast biedt Rancher build pipelines, centrale opslag van logs uit je cluster  en integratie met <a href="https://helm.sh/">Helm</a> om snel applicaties vanuit Helm charts te draaien. Daarnaast is Rancher volledig open-source met mogelijkheden om support af te nemen.</p>
+
+<h3 id="docker-ee-2-0">Docker EE 2.0</h3>
+
+<p>Sinds de komst van <a href="https://www.docker.com/products/docker-enterprise">Docker Enterprise Edition 2.0</a> biedt ook Docker (naast swarm) een mooie Kubernetes distributie. Het Docker Universal Control Plane kan je eigen maar ook cloud infrastructuur op simpele wijze inrichten als Kubernetes cluster. Wat handig is aan Docker EE is dat je zowel Docker Swarm als Kubernetes naast elkaar kunt gebruiken. Swarm is een uitstekende manier om te starten met container orchestration en ook voor productie workloads heel goed bruikbaar. Mocht je tegen de beperkingen van swarm (vaak later dan je denkt, swarm is krachtiger dan algemeen wordt aangenomen!) aan lopen, dan kun je binnen dezelfde omgeving snel overstappen naar Kubernetes. Je hebt echter wel een (trial)licentie nodig om Docker EE te gebruiken. Voordeel is wel dat je naast Universal Control Plane voor cluster management ook Docker Trusted Registry (DTR) kunt gebruiken, waarmee je een hele krachtige oplossing in handen hebt voor het opslaan van je Docker images.</p>
+
+<h3 id="the-hard-way">The Hard Way</h3>
+
+<p>Als je het hebt over Kubernetes kun je haast niet om de repo <a href="https://github.com/kelseyhightower/kubernetes-the-hard-way">Kubernetes The Hard Way</a> van Kelsey Hightower heen. Deze repo geeft je een handleiding om volledig met de hand een k8s cluster op te bouwen. Dit is lang niet voor iedereen interessant maar wil je echt alles weten over de ins en outs van k8s dan is dit een leuke besteding van een paar uur.</p>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+
+
+
+
+
+
+
+
+<figure class="author-image">
+    <a class="img" href="https://cinqict.github.io" style="background-image: url(https://octodex.github.com/images/topguntocat.png)"><span class="hidden">Roy Kliment's Picture</span></a>
+</figure>
+
+
+<section class="author">
+  <h4><a href="https://cinqict.github.io">Roy Kliment</a></h4>
+  
+  <p>DevOps Engineer</p>
+  
+  <div class="author-meta">
+    <span class="author-location icon-location">Amsterdam, Netherlands</span>
+    <span class="author-link icon-link"><a href="http://cinqict.nl">http://cinqict.nl</a></span>
+  </div>
+</section>
+
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=5%20x%20aan%20de%20slag%20met%20Kubernetes&nbsp;-&nbsp;CINQ%20ICT%20Tech%20Blog&amp;url=https%3a%2f%2fcinqict.github.io%2fpost%2froy%2f5x-kubernetes%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fcinqict.github.io%2fpost%2froy%2f5x-kubernetes%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fcinqict.github.io%2fpost%2froy%2f5x-kubernetes%2f&amp;description=5%20x%20aan%20de%20slag%20met%20Kubernetes"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2fcinqict.github.io%2fpost%2froy%2f5x-kubernetes%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+<div id="disqus_thread"></div>
+<script>
+
+
+
+
+var disqus_config = function () {
+this.page.url = "https:\/\/cinqict.github.io\/post\/roy\/5x-kubernetes\/";  
+this.page.identifier = "https:\/\/cinqict.github.io\/post\/roy\/5x-kubernetes\/"; 
+};
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://cinqicttest.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+
+
+  </footer>
+</article>
+
+</main>
+
+
+  <aside class="read-next">
+  
+  
+      <a class="read-next-story prev" style="background-image: url(/images/indexanydata.png)" href="https://cinqict.github.io/post/bob/splunkthpulimit/">
+          <section class="post">
+              <h2>Splunk best practice: Linux THP en Ulimit settings</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">CINQ ICT Tech Blog</a> CINQ ICT All rights reserved - 2018</section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="https://cinqict.github.io/js/jquery.js"></script>
+    <script type="text/javascript" src="https://cinqict.github.io/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://cinqict.github.io/js/index.js"></script>
+    
+</body>
+</html>
+

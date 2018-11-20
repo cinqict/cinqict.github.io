@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>nl-NL</language>
     <copyright>CINQ ICT All rights reserved - 2018</copyright>
-    <lastBuildDate>Tue, 16 Oct 2018 10:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 20 Nov 2018 14:00:00 +0200</lastBuildDate>
     
 	<atom:link href="https://cinqict.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>5 x aan de slag met Kubernetes</title>
+      <link>https://cinqict.github.io/post/roy/5x-kubernetes/</link>
+      <pubDate>Tue, 20 Nov 2018 14:00:00 +0200</pubDate>
+      
+      <guid>https://cinqict.github.io/post/roy/5x-kubernetes/</guid>
+      <description>Container orchestration met Kubernetes (k8s) is hot, we kunnen er gewoonweg niet meer omheen. Hieronder vind je 5 manieren om te beginnen met het opzetten van je eigen clusters, zodat je kunt starten met je eigen onderzoek naar container orchestration met Kubernetes.
+Minikube Minikube is een open-source project van Kubernetes en eigenlijk de snelste en meest eenvoudige manier om Kubernetes uit te proberen. Je download een binary en daarmee zet je op je eigen machine een klein maar volledig functioneel Kubernetes cluster op.</description>
+    </item>
     
     <item>
       <title>Splunk best practice: Linux THP en Ulimit settings</title>
